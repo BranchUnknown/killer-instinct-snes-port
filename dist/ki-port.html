@@ -11202,8 +11202,9 @@ globalThis.KIMovesData = {
         if (!f.ok) continue;
         const g = this.frameInfo(f.type, f.anim, f.frame);
         const bmp = g ? this.image(f.type, f.costume, g) : null;
-        if (!g || f.frame === 0) continue;                       // nothing to draw this frame
-        if (!bmp) { fallback |= 1 << i; continue; }              // still loading: SNES pixels instead
+        // The PPU already removed this fighter. Restore its SNES pixels whenever
+        // metadata, an animation frame, or its bitmap is unavailable.
+        if (!g || !bmp) { fallback |= 1 << i; continue; }
         const iw = bmp.width / SCALE, ih = bmp.height / SCALE;   // arcade pixels
         const sx = f.sx + st.E, top = f.sy + SY * (g.y - ih) + DY;
         c.save();

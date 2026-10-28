@@ -16,8 +16,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 3453,
-    "sha256": "8012f47c62baf9a8730d8f87880b7e5d3822a29004f4b7b6a38498695f786f83"
+    "bytes": 3673,
+    "sha256": "8c4fe9ac28826817d6a9afd31a0091a4f392e5dda442af055b97761b61f7859d"
   },
   {
     "path": "THIRD_PARTY_NOTICES.md",
@@ -31,8 +31,8 @@
   },
   {
     "path": "dist/ki-port.html",
-    "bytes": 364757,
-    "sha256": "ff8274d4e0c148fcbd050dea80c768b81c84ea48e7373e9d316081409ad82500"
+    "bytes": 364768,
+    "sha256": "c2d1f5f9f64dc5e2c3536b916772c8d784f57fbaf771606512a4431b1df97bcf"
   },
   {
     "path": "index.html",
@@ -46,8 +46,8 @@
   },
   {
     "path": "js/arcadeart.js",
-    "bytes": 10973,
-    "sha256": "db2ead538d038495f958b601f41a23bc2b6d047f5475a8d2cc934d48b111db0f"
+    "bytes": 10987,
+    "sha256": "ca933e2f15ed70324a36f03a9a12ef6a8d5ab67cc43a6ae815dd8bce7a52b45d"
   },
   {
     "path": "js/cpu.js",
@@ -148,5 +148,10 @@
     "path": "serve.ps1",
     "bytes": 5146,
     "sha256": "2c7a65832da36e16420c62fcf7dd74ce8c9dfcf1d50fe21ba543ef106a3fbc25"
+  },
+  {
+    "path": "test/arcadeart.test.js",
+    "bytes": 2620,
+    "sha256": "6c8eb5fa3c0bb89279490eff1242c7f9ec334552bdb5d0938dbee9afb61bd834"
   }
 ]
