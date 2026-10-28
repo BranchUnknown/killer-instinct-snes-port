@@ -1,5 +1,11 @@
 # Killer Instinct (SNES) - browser port
 
+## Scope of this upload
+
+This repository contains the browser runtime, launcher, and prebuilt HTML bundle. It does **not** include ROMs, MegaPatch/MSU-1 data, 4× arcade sprite images or metadata, alternate-colour sprite packs, extraction/upscaling tools, or the research tests and reference fixtures mentioned below. See [README.md](README.md) for current setup instructions and the MegaPatch release link.
+
+The verification results below are historical notes from the larger research workspace, not checks that can be rerun from this upload alone. Paths beginning with `ki-arcade/`, `test/`, or `decomp/`, and references to `KI Web controls.txt` or BFPort notes, refer to material outside this repository.
+
 Plays Killer Instinct in a web browser from **your own cartridge dump** (USA v1.1, 4 MB,
 CRC32 `09E9A04E`). The ROM is read locally and never leaves the device; nothing from the
 cartridge is shipped with the port.
@@ -20,10 +26,10 @@ cartridge is shipped with the port.
 * **Press a key, click or tap** on the start screen. This also switches the sound on; browsers do
   not count a gamepad press for that, so if you start with the controller and hear nothing, press
   any key or click once (a hint appears at the bottom of the screen).
-* **Arcade fighters** (Menu, under the screen filter): in fights the fighters are drawn with the arcade
+* **Arcade fighters — optional external assets, not included** (Menu, under the screen filter): with a compatible separately supplied sprite collection, fighters in fights are drawn with the arcade
   game's own sprites, 4x upscaled (`ki-arcade/out/art/kinst/fighters_4x` and `fighters_c1_4x` ..
-  `fighters_c5_4x` for the other colours). From `Play Killer Instinct.bat` the art is found by itself
-  (`serve.ps1` serves `ki-arcade/out/art` as `/arcade/`); opened as a file, choose the
+  `fighters_c5_4x` for the other colours). Automatic discovery from `Play Killer Instinct.bat` only works with the original workspace's external art directory
+  (`serve.ps1` maps `../../ki-arcade/out/art` to `/arcade/`). In a standalone checkout, manually choose the compatible
   `ki-arcade/out/art/kinst` folder. The HUD and foreground stay in front, frames still loading show
   the SNES sprite for that frame. Not carried over: palette flashes (hit flash, Shadow glow), the
   fighters' floor reflections, and the screen filters (the arcade fighters are drawn sharp on top).
@@ -31,7 +37,7 @@ cartridge is shipped with the port.
 * **Esc** (or the Menu button, or the controller's Guide button) opens the menu: volume, 4:3 /
   square pixels, fullscreen (F11), reset, and **button remapping** for keyboard and controller.
 
-### Controls (from `KI Web controls.txt`)
+### Controls (original source: external `KI Web controls.txt`)
 
 | SNES | Keyboard | Xbox controller | KI |
 |---|---|---|---|
@@ -63,7 +69,9 @@ menu once; the mapping is saved in the browser.
 | APU ports | `js/apu.js` | boot-ROM / loader / driver handshakes, with the real SPC timing (measured) |
 | app | `js/main.js`, `js/input.js` | ROM check + IndexedDB, start screen, audio worklet, frame pacing on the audio clock, input, menu |
 
-## Verification (`test/`, Node 18+)
+## Historical verification (external `test/`, Node 18+)
+
+The following scripts and their fixtures are not included. These results were recorded during development and have not been revalidated by the upload's packaging checks.
 
 * `node test/driver_test.js`: the JS driver against 85 reference logs of the real driver on
   LakeSnes (songs, all SFX, sub-songs, uploads, song changes): identical DSP writes.

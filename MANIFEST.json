@@ -1,28 +1,8 @@
 [
   {
-    "path": ".gitattributes",
-    "bytes": 13,
-    "sha256": "f80dcc94402f38c7b9be9d27d83a5f3010189ba041cdc5f27094480b4f909d0d"
-  },
-  {
-    "path": ".gitignore",
-    "bytes": 194,
-    "sha256": "00f15174f6fdcad5d6201fdc833ac896857649fcc17288d8fff2d82e66e43e92"
-  },
-  {
-    "path": "build.py",
-    "bytes": 904,
-    "sha256": "76d4f8a1035f68c7bc0f9c34eb3a129af71a91d56ea8dcad661f5ccb6906c41b"
-  },
-  {
     "path": "DEVELOPMENT.md",
-    "bytes": 5198,
-    "sha256": "a2dbd82a19ab5e56c053284eee0a1d5c1fc20fef6ccc792a52763b0f9e3ac0f9"
-  },
-  {
-    "path": "index.html",
-    "bytes": 23385,
-    "sha256": "cac14478f70c1c5a2d0d1aaec4c4a3278eabbd4a45d72eda19264ef32916c03d"
+    "bytes": 6312,
+    "sha256": "ecc72dc576c88d957ad69d7df3a174a13a6c2345bafbe216fe273a7f8c52e7d5"
   },
   {
     "path": "LICENSE",
@@ -36,13 +16,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 2592,
-    "sha256": "3b16149f31c76dc691b1089852203b1f89f39e8ff0f1e34f60d535a791c56a2b"
-  },
-  {
-    "path": "serve.ps1",
-    "bytes": 5146,
-    "sha256": "2c7a65832da36e16420c62fcf7dd74ce8c9dfcf1d50fe21ba543ef106a3fbc25"
+    "bytes": 3453,
+    "sha256": "8012f47c62baf9a8730d8f87880b7e5d3822a29004f4b7b6a38498695f786f83"
   },
   {
     "path": "THIRD_PARTY_NOTICES.md",
@@ -50,9 +25,19 @@
     "sha256": "dc4c677047017e30181f9c5b465210080493f9ec70d844f96d40b6996f528a04"
   },
   {
+    "path": "build.py",
+    "bytes": 904,
+    "sha256": "76d4f8a1035f68c7bc0f9c34eb3a129af71a91d56ea8dcad661f5ccb6906c41b"
+  },
+  {
     "path": "dist/ki-port.html",
     "bytes": 364757,
     "sha256": "ff8274d4e0c148fcbd050dea80c768b81c84ea48e7373e9d316081409ad82500"
+  },
+  {
+    "path": "index.html",
+    "bytes": 23385,
+    "sha256": "cac14478f70c1c5a2d0d1aaec4c4a3278eabbd4a45d72eda19264ef32916c03d"
   },
   {
     "path": "js/apu.js",
@@ -158,5 +143,10 @@
     "path": "js/video.js",
     "bytes": 10405,
     "sha256": "4cae6e76c850c56a0eaaa75932a8f83da957aab6364cafe08f142e8bf0da41a3"
+  },
+  {
+    "path": "serve.ps1",
+    "bytes": 5146,
+    "sha256": "2c7a65832da36e16420c62fcf7dd74ce8c9dfcf1d50fe21ba543ef106a3fbc25"
   }
 ]

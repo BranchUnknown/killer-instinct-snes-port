@@ -2,6 +2,8 @@
 
 A JavaScript browser port for the USA v1.1 SNES version of Killer Instinct. Supply your own headerless 4 MB cartridge dump (CRC32 `09E9A04E`). Game ROMs and optional media are not included.
 
+**Optional download:** [Killer Instinct Arcade MegaPatch / MSU-1 — gizaha's release thread on Zeldix](https://www.zeldix.net/t2002-killer-instinct-arcade-mega-patch). The first post links the patch and sound/data files. These are separate downloads, not included in this repository.
+
 ## Play
 
 On Windows, extract this repository and double-click **Play Killer Instinct.bat**. Select or drag your ROM onto the page. The launcher runs a local server at http://localhost:8642; close its console to stop it. Chrome or Edge is recommended.
@@ -20,26 +22,21 @@ python build.py
 
 This regenerates `dist/ki-port.html` from `index.html` and `js/*.js`. No ROM is needed to build. The included bundle was regenerated for this package; all JavaScript source files passed `node --check`.
 
-Optional MegaPatch/MSU-1 files and arcade fighter art must be supplied separately through the application's selectors. The Windows server's automatic arcade-art lookup expects the original research workspace layout; use the folder picker in a standalone checkout.
+## Optional extras (not included)
+
+**Arcade MegaPatch / MSU-1:** use the release link above and supply your own base ROM. In the port's menu, choose the folder containing `ki.msu`, the `ki-N.pcm` tracks, and `patch.ips` (or `ki.sfc`). On a phone, use **Choose files** and select the required files together. The Windows launcher can also discover a supplied MegaPatch folder inside the repository folder.
+
+**4× arcade fighter sprites:** the optional renderer is included, but the sprite images, metadata, alternate-colour packs, and extraction/upscaling tools are not. The MegaPatch download is separate from this renderer's sprite collection. Without that collection, use the normal SNES sprites. If you already have compatible art, choose the folder containing `fighters_4x` and any `fighters_c1_4x` through `fighters_c5_4x` folders in the menu. The Windows server's automatic arcade-art lookup expects the original research workspace layout and will not find art in a plain checkout.
 
 ## Contents and status
 
 `js/` contains the runtime, `build.py` the single-file bundler, and `serve.ps1` the Windows launcher server. `MANIFEST.json` records SHA-256 checksums of the packaged files (excluding itself). Research tools, reference captures, tests requiring external fixtures, ROMs, patches, music, extracted sprites, and bundled toolchains are excluded.
 
-`DEVELOPMENT.md` preserves the original development notes, including historical verification results and paths into the larger research workspace. Those reference fixtures and scripts are not part of this standalone package. Packaging checks verify syntax and contents; they do not revalidate gameplay.
+`DEVELOPMENT.md` includes development notes, historical verification results, and paths into the larger research workspace. Those reference fixtures and scripts are not part of this standalone package. Packaging checks verify syntax and contents; they do not revalidate gameplay.
 
-## Upload to GitHub
+## Repository layout
 
-Extract the ZIP, then upload the **contents** of the extracted folder to your repository, including `.gitignore` and `.gitattributes`. Or run these commands inside that folder after creating an empty GitHub repository:
-
-```sh
-git init
-git add .
-git commit -m "Package SNES browser port"
-git branch -M main
-git remote add origin YOUR_REPOSITORY_URL
-git push -u origin main
-```
+The port files are at the repository root; no additional upload-folder level is needed. This upload does not contain `.gitignore` or `.gitattributes`. Keep your ROMs, downloaded MegaPatch/MSU-1 files, and external sprite collections out of commits.
 
 Original software contributions are MIT licensed; see `LICENSE`. Third-party terms and attribution are in `THIRD_PARTY_NOTICES.md`.
 
